@@ -1,6 +1,6 @@
-# Ci/CD Pipeline Steps
+# Ci/CD Pipeline Steps 
 
-## 1. Pre-Deployment: Generate and Secure the Expected State
+### 1. Pre-Deployment: Generate and Secure the Expected State
 
 1. Generate the Fingerprint:
     * Compute a composite cryptographic hash (e.g., SHA256) of:
@@ -24,7 +24,7 @@
         * Build and deployment environment details.
     * Include the metadata in the published fingerprint file.
 
-## 2. Deployment: Verify and Log Deployed State
+### 2. Deployment: Verify and Log Deployed State
 
 1. Verify Artifacts Match Expected State
    * Before deployment, verify that the artifacts match the signed fingerprint.
@@ -34,7 +34,7 @@
    * Deploy validated containerized services or binaries.
    * Log artifact hashes for auditing.
 
-## 3. Post-Deployment: Expose Runtime State
+### 3. Post-Deployment: Expose Runtime State
 
 1. Expose Runtime Fingerprint
    * Provide an API or CLI endpoint to expose runtime details:
@@ -45,7 +45,7 @@
    * Dynamically compute a runtime fingerprint based on the exposed details.
    * Ensure consistency with the expected fingerprint's components.
 
-## Validation: Facilitate Independent Verification
+### Validation: Facilitate Independent Verification
 
 1. User Verification Tools
    * Provide CLI tools or scripts to:
@@ -56,8 +56,7 @@
    * Publish logs of verification checks.
    * Store these logs in an immutable or tamper-evident location (e.g., AWS CloudTrail, blockchain).
   
-## Cryptographic Measures
-
+### Cryptographic Measures
 1. Cryptographic Hashing
    * Use secure hashing algorithms like SHA256 or SHA512.
    * Ensure deterministic hashing for reproducibility.
@@ -75,7 +74,7 @@
    * Store logs and fingerprints in tamper-evident systems:
      * Examples: AWS CloudTrail, HashiCorp Vault, or blockchain.
 
-# Pipeline Diagram
+## Pipeline Diagram
 
 ```text
 +-----------------+   +-----------------+   +--------------------+   +-------------------+
