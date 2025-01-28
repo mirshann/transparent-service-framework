@@ -19,9 +19,9 @@ This project aims to solve this problem by enabling users to independently verif
 2. Expose Verifiable Runtime State: Provide a way to query raw runtime information (e.g., container image hashes, configurations, infrastructure metadata) directly from the deployed platform. This ensures that the actual running system can be independently verified.
 
 3. Facilitate User-Driven Validation: Offer tools for users to:
-    * Retrieve the published expected fingerprint.
-    * Query the runtime environment for its state.
-    * Compute and compare the runtime fingerprint with the expected one to validate the integrity of the deployment.
+   * Retrieve the published expected fingerprint.
+   * Query the runtime environment for its state.
+   * Compute and compare the runtime fingerprint with the expected one to validate the integrity of the deployment.
 
 By bridging the gap between expected and runtime states, this project empowers end-users to validate deployments independently, fostering trust, transparency, and compliance in modern platform deployments.
 
