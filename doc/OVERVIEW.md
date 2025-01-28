@@ -1,5 +1,6 @@
 # Ci/CD Pipeline Steps 
 
+
 ### 1. Pre-Deployment: Generate and Secure the Expected State
 
 1. Generate the Fingerprint:
@@ -24,6 +25,7 @@
         * Build and deployment environment details.
     * Include the metadata in the published fingerprint file.
 
+
 ### 2. Deployment: Verify and Log Deployed State
 
 1. Verify Artifacts Match Expected State
@@ -33,6 +35,7 @@
    * Use IaC tools (e.g., Terraform, Pulumi) to deploy infrastructure.
    * Deploy validated containerized services or binaries.
    * Log artifact hashes for auditing.
+
 
 ### 3. Post-Deployment: Expose Runtime State
 
@@ -45,7 +48,8 @@
    * Dynamically compute a runtime fingerprint based on the exposed details.
    * Ensure consistency with the expected fingerprint's components.
 
-### Validation: Facilitate Independent Verification
+
+### 4. Validation: Facilitate Independent Verification
 
 1. User Verification Tools
    * Provide CLI tools or scripts to:
@@ -55,8 +59,10 @@
 2. Audit Trail
    * Publish logs of verification checks.
    * Store these logs in an immutable or tamper-evident location (e.g., AWS CloudTrail, blockchain).
-  
-### Cryptographic Measures
+
+
+## Cryptographic Measures
+
 1. Cryptographic Hashing
    * Use secure hashing algorithms like SHA256 or SHA512.
    * Ensure deterministic hashing for reproducibility.
